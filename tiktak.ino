@@ -33,10 +33,8 @@ int col[3] = {10,9,8};
 int kayVals[9] = {295, 329, 378, 308, 341, 388, 332, 363, 407};
 // the values of resistency on each key on the keypad
 
-void setup()
-{
-  for (int i=1;i<14;i++)
-  {
+void setup() {
+  for (int i=1;i<14;i++) {
     pinMode(i, OUTPUT);
   
   } 
@@ -51,8 +49,7 @@ void setup()
 }
 
 
-void loop()
-{
+void loop() {
 
   key = analogRead(A1);
   Serial.println(key);
@@ -147,19 +144,9 @@ void loop()
       player++;
       delay(100);
     }break;
-    
-    
     if (digitalRead(A0) && digitalRead(A2) && digitalRead(A3) == HIGH){
       digitalWrite(8, HIGH);
     }
-   
-
   }
-  
-  
-
-  
-  
- 
 }
 
